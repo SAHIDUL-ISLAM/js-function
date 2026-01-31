@@ -6,8 +6,8 @@ sum(10,2);
 
 
 // squire a number
-function number(num){
+function number5(num){
     const squire = num*num;
     console.log(squire);
 }
-number(5);
+number5(5);
