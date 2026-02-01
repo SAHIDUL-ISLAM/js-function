@@ -15,3 +15,4 @@ function arr(array){
 const numbers = [10,20,30,40];
 const theNum = arr(numbers);
 console.log("The summation of array: " + theNum);
+
