@@ -10,6 +10,18 @@ console.log(oddNumber(9));
 
 
 // *******************
+function evenNumber(numbers){
+    if(numbers%2===0){
+        return true;
+    }else{
+        return false;
+    }
+}
+let connum = evenNumber(30);
+console.log("This is the Even Number Condition : " + connum);
+
+
+// **********************
 
 function checkkor(number, doubble){
     if(doubble === true){

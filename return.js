@@ -1,3 +1,5 @@
+
+
 function tentimes(number){
     const result = number *10;
     return result;
@@ -16,3 +18,12 @@ const giveNumber = myFunction(10,25);
 console.log(giveNumber);
 
 
+// **************************
+function memory(oldmemory){
+    return oldmemory;
+}
+let mem = memory("Hello! Sir");
+console.log(mem);
+
+
+// *******************

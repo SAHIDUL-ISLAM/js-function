@@ -1,6 +1,5 @@
-function callMe(okey){
-    console.log(okey);
-    console.log("How Can I Help You!!");
+function memory(oldmemory){
+    return oldmemory;
 }
-callMe("Hello")
-callMe("Assalamualaikum")
+let mem = memory("Hello! Sir");
+console.log(mem);
