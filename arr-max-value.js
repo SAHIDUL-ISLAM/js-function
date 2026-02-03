@@ -32,15 +32,38 @@
 // ********************
 // min value  
 
-function minimumPrice(amount){
-    let min = amount[0];
-    for(const price of amount){
-        if(price<min){
-            min = price;
+// function minimumPrice(amount){
+//     let min = amount[0];
+//     for(const price of amount){
+//         if(price<min){
+//             min = price;
+//         }
+//     }
+//     return min;
+// }
+// const array = [19000,16000,20000,25000,13000,15000];
+// const result = minimumPrice(array);
+// console.log(result);
+
+
+// ************************
+// max value in a object 
+
+function maxObj(phones){
+    let max = phones[0];
+    for(const prices of phones){
+        if(prices.price>max.price){
+            max = prices;
         }
     }
-    return min;
+    return max;
 }
-const array = [19000,16000,20000,25000,13000,15000];
-const result = minimumPrice(array);
+const data = [
+    {name: "Samsung",price: 45000,color: "Black"},
+    {name: "Infinix",price: 16000,color: "Golden"},
+    {name: "Nokia",price: 1200,color: "Black"},
+    {name: "I Phone",price: 105000,color: "Black"}
+]
+
+const result = maxObj(data);
 console.log(result);
