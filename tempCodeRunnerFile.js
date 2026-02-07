@@ -1,1 +1,1 @@
-1500
+omr.right + omr.wrong + omr.skip

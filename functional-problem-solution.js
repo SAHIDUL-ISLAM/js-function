@@ -22,17 +22,38 @@
  * OTP Validation for Zapshift
  */
 /*function signature/sample */
-function validOtp(otp) {
-    if(typeof otp !== 'string'){
+// function validOtp(otp) {
+//     if(typeof otp !== 'string'){
+//         return "Invalid";
+//     }else if(otp.length==8 && otp.startsWith("ph-")){
+//         return true;
+//     }else{
+//         return false;
+//     }
+
+// }
+// const get = validOtp("ph-15243");
+// console.log(get);
+
+
+
+
+
+/***
+ * BCS Final Score Calculator
+ */
+/*function signature/sample */
+function finalScore (omr) {
+    if((omr.right + omr.wrong + omr.skip) !==100){
         return "Invalid";
-    }else if(otp.length==8 && otp.startsWith("ph-")){
-        return true;
-    }else{
-        return false;
     }
-
+    const totalRightScore = omr.right*1;
+    const totalWrongScore = omr.wrong*0.5;
+    const totalScore = totalRightScore-totalWrongScore;
+    const finalScore = (Math.round(totalScore));
+    return finalScore;
 }
-const get = validOtp("ph-15243");
-console.log(get);
-
+const obj = { right: 50, wrong: 10, skip: 40 };
+const values = finalScore(obj)
+console.log(values);
 
