@@ -65,28 +65,60 @@
  */
 
 /*function signature/sample */
-function gonoVote(array) {
-    if(Array.isArray(array)==false){
+// function gonoVote(array) {
+//     if(Array.isArray(array)==false){
+//         return "Invalid";
+//     }
+//     let haVote = 0;
+//     let naVote = 0;
+//     for(const arrays of array){
+//         if(arrays == "ha"){
+//             haVote = haVote+1;
+//         }else if(arrays == "na"){
+//             naVote = naVote +1;
+//         }
+//     }
+//     if(haVote>naVote){
+//         return true;
+//     }else if(haVote==naVote){
+//         return "equal";
+//     }else{
+//         return false;
+//     }
+// }
+// const arr = ["ha", "na", "ha", "na"];
+// const result = gonoVote(arr);
+// console.log(result);
+
+
+
+
+
+/***
+ * Text Analyzer for an AI Company
+ */
+
+
+/*function signature/sample */
+function analyzeText(str) {
+    if((typeof str !== 'string')){
+        return "Invalid";
+    }else if(str<=0){
         return "Invalid";
     }
-    let haVote = 0;
-    let naVote = 0;
-    for(const arrays of array){
-        if(arrays == "ha"){
-            haVote = haVote+1;
-        }else if(arrays == "na"){
-            naVote = naVote +1;
+    let strlen = "";
+    let text = str.split(" ")
+    let senLen = text.join("").length;
+    console.log(senLen)
+    for(const texts of text){
+        if(texts.length>strlen.length){
+            strlen = texts;
         }
     }
-    if(haVote>naVote){
-        return true;
-    }else if(haVote==naVote){
-        return "equal";
-    }else{
-        return false;
+    return {
+         longwords: strlen, token: senLen 
     }
 }
-const arr = ["ha", "na", "ha", "na"];
-const result = gonoVote(arr);
+const result = analyzeText("hello world");
 console.log(result);
 
