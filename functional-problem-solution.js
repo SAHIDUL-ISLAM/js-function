@@ -43,17 +43,50 @@
  * BCS Final Score Calculator
  */
 /*function signature/sample */
-function finalScore (omr) {
-    if((omr.right + omr.wrong + omr.skip) !==100){
+// function finalScore (omr) {
+//     if((omr.right + omr.wrong + omr.skip) !==100){
+//         return "Invalid";
+//     }
+//     const totalRightScore = omr.right*1;
+//     const totalWrongScore = omr.wrong*0.5;
+//     const totalScore = totalRightScore-totalWrongScore;
+//     const finalScore = (Math.round(totalScore));
+//     return finalScore;
+// }
+// const obj = { right: 50, wrong: 10, skip: 40 };
+// const values = finalScore(obj)
+// console.log(values);
+
+
+
+
+/***
+ * Upcoming Gono Vote
+ */
+
+/*function signature/sample */
+function gonoVote(array) {
+    if(Array.isArray(array)==false){
         return "Invalid";
     }
-    const totalRightScore = omr.right*1;
-    const totalWrongScore = omr.wrong*0.5;
-    const totalScore = totalRightScore-totalWrongScore;
-    const finalScore = (Math.round(totalScore));
-    return finalScore;
+    let haVote = 0;
+    let naVote = 0;
+    for(const arrays of array){
+        if(arrays == "ha"){
+            haVote = haVote+1;
+        }else if(arrays == "na"){
+            naVote = naVote +1;
+        }
+    }
+    if(haVote>naVote){
+        return true;
+    }else if(haVote==naVote){
+        return "equal";
+    }else{
+        return false;
+    }
 }
-const obj = { right: 50, wrong: 10, skip: 40 };
-const values = finalScore(obj)
-console.log(values);
+const arr = ["ha", "na", "ha", "na"];
+const result = gonoVote(arr);
+console.log(result);
 
